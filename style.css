@@ -1,0 +1,277 @@
+body {
+    font-family: 'Georgia', serif;
+    background: #f1f1f1;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    cursor: url('wand.png'), auto;
+
+}
+
+.quiz-container {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    transition: all 0.5s ease;
+}
+
+.answer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.answer-buttons button {
+    padding: 10px 20px;
+    background: #ddd;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.answer-buttons button:hover {
+    background: #bdbdbd;
+}
+
+.next-btn {
+    padding: 10px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    display: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#house-crest {
+    width: 160px;
+    margin: 15px auto;
+    display: block;
+    border-radius: 50%;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 15px gold;
+    }
+
+    100% {
+        box-shadow: 0 0 25px red, 0 0 30px orange;
+    }
+}
+
+
+#house-crest:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px gold);
+}
+
+#house-name {
+    color: #4a90e2;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+#result-card {
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.progress-bar {
+    height: 8px;
+    background: #4a90e2;
+    width: 0%;
+    border-radius: 8px;
+    transition: width 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #5f4b8b, #c94b4b);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 999;
+    transition: opacity 0.6s ease;
+}
+
+.intro-screen h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.intro-screen p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+#start-btn {
+    background: white;
+    color: #5f4b8b;
+    font-size: 1rem;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#start-btn:hover {
+    background: #eee;
+}
+
+#sorting-hat {
+    width: 150px;
+    animation: fadeInHat 2s ease-in-out forwards;
+    opacity: 0;
+    margin-bottom: 20px;
+}
+
+@keyframes fadeInHat {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px) rotate(-5deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+.card {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.image-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#question-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+#image-caption {
+    font-size: 0.95rem;
+    margin-top: 8px;
+    color: #555;
+    font-style: italic;
+}
+
+.karen-corner {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px dashed #aaa;
+    text-align: center;
+    background: #fff6f9;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.karen-corner h3 {
+    font-family: 'Cursive', serif;
+    color: #b35c8d;
+    margin-bottom: 10px;
+}
+
+.karen-corner img {
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    margin-bottom: 8px;
+}
+
+.karen-corner p {
+    font-size: 0.95rem;
+    color: #444;
+    font-style: italic;
+}
+
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .quiz-container {
+        padding: 20px;
+    }
+
+    .intro-screen h1 {
+        font-size: 2rem;
+    }
+
+    .intro-screen p,
+    #image-caption {
+        font-size: 1rem;
+    }
+
+    .answer-buttons button {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    #start-btn {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+    }
+}

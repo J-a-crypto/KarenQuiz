@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Hat Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="intro-screen" class="intro-screen">
+        <img id="sorting-hat" src="sorthat.png" alt="Sorting Hat" />
+        <h1>Hi Karen! 🧙‍♀️</h1>
+        <p>Enjoy these series of questions and images all revolved around you.</p>
+        <button id="start-btn">Start Quiz</button>
+    </div>
+
+
+    <div class="quiz-container">
+        <h1>Which Hogwarts House Are You?</h1>
+        <div class="progress-bar" id="progress-bar"></div>
+        <div class="card" id="question-card">
+            <div id="question-text"></div>
+            <div id="answer-buttons" class="answer-buttons"></div>
+            <button id="next-btn" class="next-btn">Next</button>
+            <div class="karen-corner">
+                <h3>🌟 Karen’s Corner</h3>
+                <div class="image-box">
+                    <img id="karen-image" src="k1.jpeg" alt="A memory" />
+                    <p id="karen-caption">hdhhdhd</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="result-card" class="card hidden">
+            <h2>You belong in <span id="house-name"></span>!</h2>
+            <div
+                style="padding: 10px; border: 4px solid gold; border-radius: 16px; display: inline-block; background: #fff3;">
+                <img id="house-crest" src="" alt="House Crest" />
+            </div>
+            <p id="house-desc"></p>
+            <button onclick="restartQuiz()">Restart</button>
+        </div>
+        <div id="tribute" class="hidden"
+            style="margin-top: 40px; text-align: center; padding: 20px; background: #fdf6f0; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+            <h2 style="font-size: 1.5em;">✨ A Note for Karen ✨</h2>
+            <p style="max-width: 600px; margin: 0 auto; font-style: italic;">
+                Hey Karen! Before I say anything else, congratulations on becoming 22! 🎉
+                You can finally say that Taylor Swift made a song about you!
+                I just wanted to say that you are one of the most kindest, genuine, and funniest Ecuadorian people I
+                know.
+                Don't flatter yourself too much, you're not that funny. You really made my experience in Just Salad
+                better and
+                those work shifts more tolerable. I am glad that I got to know you and we became friends,
+                and I hope we can continue to be friends for a long time.
+                I can't wait to see what the future holds for you and if you get to meet your Henry Cavil, Mr.Darcy,
+                Percy, that customer named Mario, or the guy from Hunger Games.
+                I hope you enjoy the quiz and cheers to many more years of friendship! 🥂
+            </p>
+            <p style="margin-top: 1em;">PS. Remember I hate to show you the reality of life. So just keep overcoming the
+                hate. c:</p>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
